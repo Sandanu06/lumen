@@ -1,0 +1,26 @@
+name: Bug report
+description: Something does not work as documented
+labels: [bug]
+body:
+  - type: input
+    id: tv
+    attributes: {label: TV model and webOS version, description: "Settings → Support → About this TV, or `npx ares-device -d lgtv -i`", placeholder: "LG 55UP7550PTC, webOS 6.2"}
+    validations: {required: true}
+  - type: input
+    id: version
+    attributes: {label: Lumen version, placeholder: "1.0.0 (see app/appinfo.json)"}
+    validations: {required: true}
+  - type: textarea
+    id: what
+    attributes: {label: What happened, description: What you pressed, what you expected, what you saw. A photo or screenshot helps.}
+    validations: {required: true}
+  - type: textarea
+    id: output
+    attributes: {label: Output, description: "Output of `npm run check`, setup, or the service `status` call. **Remove any tokens or keys first.**", render: shell}
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checked
+      options:
+        - label: I read docs/TROUBLESHOOTING.md
+        - label: I removed tokens, keys and personal data from anything I pasted

@@ -1,0 +1,1 @@
+{"name": "com.sandman.home.service", "version": "1.0.0", "description": "Reopens the Home app when the stock launcher appears", "main": "service.js"}

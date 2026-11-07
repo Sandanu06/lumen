@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Lint, test, build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Lint (syntax, Chrome 79 rules, no tracked secrets)
+        run: npm run lint
+      - name: Tests
+        run: npm test
+      - name: Build the .ipk (no TV needed; keys are empty, for validation only)
+        run: npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lumen-validation-ipk
+          path: dist/*.ipk
+          retention-days: 7

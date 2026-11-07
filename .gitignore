@@ -1,0 +1,26 @@
+# --- private: never commit these (setup writes them; they hold keys and tokens) ---
+.lgtv-key*
+.lumen.json
+app/session.js
+app/spotify.js
+service/tv.json
+
+# --- generated on your machine by `npm run setup` / `npm run sync` / `npm run art` ---
+app/apps.js
+app/icons/
+app/art/
+
+# --- build output and tooling state ---
+node_modules/
+dist/
+.impeccable/
+.playwright-mcp/
+.DS_Store
+*.log
+
+# --- docs media working files (the final images, GIF and MP4 are committed) ---
+docs/media/frames/
+
+# --- local design-tool records (not part of the project) ---
+/PRODUCT.md
+/DESIGN.md

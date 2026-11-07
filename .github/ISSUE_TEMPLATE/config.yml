@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Setup help
+    url: https://github.com/Sandanu06/lumen/blob/main/docs/TROUBLESHOOTING.md
+    about: Read the troubleshooting guide first
+  - name: Report a security problem privately
+    url: https://github.com/Sandanu06/lumen/security/advisories/new
+    about: Do not post secrets or vulnerabilities in public issues

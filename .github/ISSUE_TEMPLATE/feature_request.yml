@@ -1,0 +1,11 @@
+name: Feature request
+description: An idea for Lumen
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes: {label: What would you like?, description: The problem first, then your idea. Remember the TV runs Chrome 79 and is driven by a remote.}
+    validations: {required: true}
+  - type: textarea
+    id: alt
+    attributes: {label: Alternatives you considered}
